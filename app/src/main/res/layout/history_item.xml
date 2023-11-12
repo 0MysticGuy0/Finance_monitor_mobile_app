@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EFEEEE"
+    android:layout_marginTop="8dp">
+
+    <LinearLayout
+        android:id="@+id/historyItem_infoLL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/historyItem_description"
+        app:layout_constraintEnd_toStartOf="@id/historyItem_operationSign"
+        app:layout_constraintStart_toEndOf="@id/historyItem_icoCV"
+        app:layout_constraintTop_toBottomOf="@id/historyItem_sumLL"
+        android:layout_marginHorizontal="4dp"
+        android:background="#E1E1E1"
+        >
+
+        <TextView
+            android:id="@+id/historyItem_category"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="категория"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/historyItem_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00/00/0000"
+            android:textAlignment="viewEnd"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/historyItem_sumLL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@id/historyItem_operationSign"
+        app:layout_constraintStart_toEndOf="@id/historyItem_icoCV"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/historyItem_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_currency_ruble_24" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@color/gray1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/historyItem_operationSign"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:background="#373737"
+        android:src="@drawable/baseline_arrow_upward_24"
+        app:layout_constraintBottom_toTopOf="@id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/historyItem_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="описание"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/imageView8"
+        app:layout_constraintEnd_toStartOf="@id/historyItem_operationSign"
+        app:layout_constraintStart_toEndOf="@id/historyItem_icoCV"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginBottom="8dp"
+        android:paddingTop="4dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/historyItem_icoCV"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintBottom_toTopOf="@id/imageView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/historyItem_ico"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:src="@drawable/baseline_edit_24" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

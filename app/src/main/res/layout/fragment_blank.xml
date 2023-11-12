@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment"
+    android:orientation="vertical"
+    android:background="@drawable/gradient1">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_marginVertical="32dp"
+        android:layout_marginHorizontal="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D6D6D6">
+
+            <LinearLayout
+                android:id="@+id/balanceTopPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3D8750"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/balanceName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="Баланс:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/addInfoBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill_vertical"
+                    android:background="#3D8650"
+                    android:backgroundTint="#3D8650"
+                    android:padding="8dp"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:src="@drawable/baseline_add_24"
+                    android:tint="#FFFFFF" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="99999.99999"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/balanceBottomPanel"
+                app:layout_constraintEnd_toStartOf="@id/valutaImg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/balanceTopPanel" />
+
+            <ImageView
+                android:id="@+id/valutaImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/baseline_currency_ruble_24"
+                app:layout_constraintBottom_toTopOf="@id/balanceBottomPanel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/balance"
+                app:layout_constraintTop_toBottomOf="@id/balanceTopPanel" />
+
+            <LinearLayout
+                android:id="@+id/balanceBottomPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:padding="8dp"
+                    android:text="последнее изменение: "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/balance_lastAddDate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:padding="8dp"
+                    android:text="*"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/addConstraintBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#AFA9A9"
+                    android:backgroundTint="#F1EFEF"
+                    android:padding="8dp"
+                    android:src="@drawable/baseline_lock_24"
+                    android:tint="#5E5E5E" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@color/black"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="8dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Категории :"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"/>
+
+        <ImageButton
+            android:id="@+id/addCategoryBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_add_24" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@color/gray1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoriesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_weight="1"
+        android:background="#E6E6E6"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</LinearLayout>

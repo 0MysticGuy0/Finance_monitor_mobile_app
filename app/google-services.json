@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "9101384524",
+    "project_id": "financemonitor-5ad5c",
+    "storage_bucket": "financemonitor-5ad5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9101384524:android:7acbe423aa4c8256d8cde9",
+        "android_client_info": {
+          "package_name": "com.mygy.tanyafinances"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc1qNGQC55afpZbpWFS6PZViHJRchj4gg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainNavBtn"
+        android:title="главная"
+        android:icon="@drawable/baseline_home_24"/>
+    <item
+        android:id="@+id/historyNavBtn"
+        android:icon="@drawable/baseline_history_24"
+        android:title="история" />
+    <item
+        android:id="@+id/chartNavBtn"
+        android:icon="@drawable/baseline_bar_chart_24"
+        android:title="отчет" />
+
+</menu>

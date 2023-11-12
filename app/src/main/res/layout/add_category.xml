@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Создать категорию"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="100dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_edit_24"
+            android:padding="8dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/addCategory_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Введите имя новой категории"
+        android:inputType="text"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Описание: "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="#EDEAEA"
+        android:layout_marginTop="4dp"/>
+
+    <EditText
+        android:id="@+id/addCategory_description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#EDEAEA"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Введите описание для операции"
+        android:inputType="textMultiLine"
+        android:layout_marginBottom="4dp"
+        android:lines="5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <ImageButton
+            android:id="@+id/addCategory_cancelBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp"
+            android:src="@drawable/baseline_cancel_presentation_24" />
+
+        <ImageButton
+            android:id="@+id/addCategory_addBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp"
+            android:src="@drawable/baseline_check_24" />
+    </LinearLayout>
+</LinearLayout>
